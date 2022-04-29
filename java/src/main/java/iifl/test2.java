@@ -25,8 +25,8 @@ public class test2 {
 
 		System.out.println(" \n ************* LoginRequestMobileForVendor  ************* \n");
 		JSONObject obj = new JSONObject();
-		obj.put("Email_id", "SHUBHAM.RAJAK@IIFL.COM");
-		obj.put("ContactNumber", "7769941110");
+		obj.put("Email_id", "ABC@XYZ.COM");
+		obj.put("ContactNumber", "9123456780");
 		Response response = apis.LoginRequestMobileForVendor(obj);
 		System.out.println("\n Response >> " + response.body().string());
 		assertTrue(response.isSuccessful());
@@ -36,10 +36,10 @@ public class test2 {
 	public void LoginRequestV2() throws IOException, ParseException {
 		System.out.println(" \n ************* LoginRequestV2  ************* \n");
 		JSONObject obj2 = new JSONObject();
-		obj2.put("ClientCode", "96131461");
-		obj2.put("Password", "chinki@1");
+		obj2.put("ClientCode", "YOUR_CLIENT_CODE_HERE");
+		obj2.put("Password", "YOUR_PASSWORD_HERE");
 		obj2.put("HDSerialNumber", "1.0.16.0");
-		obj2.put("My2PIN", "19951211");
+		obj2.put("My2PIN", "YOUR_DOB_HERE_IN_YYYYMMDD_FORMAT");
 		obj2.put("MACAddress", "1.0.16.0");
 		obj2.put("RequestNo", 1);
 		obj2.put("ConnectionType", 1);
@@ -62,7 +62,7 @@ public class test2 {
 	public void OrderRequest() throws IOException, ParseException {
 		System.out.println(" \n ************* OrderRequest  ************* \n");
 		JSONObject obj3 = new JSONObject();
-		obj3.put("ClientCode", "96131461");
+		obj3.put("ClientCode", "YOUR_CLIENT_CODE_HERE");
 		obj3.put("OrderFor", "P");
 		obj3.put("Exchange", "N");
 		obj3.put("ExchangeType", "C");
@@ -85,7 +85,7 @@ public class test2 {
 		obj3.put("AHPlaced", "N");
 		obj3.put("ValidTillDate", "/Date(1600248018615)/");
 		obj3.put("iOrderValidity", 0);
-		obj3.put("OrderRequesterCode", "96131461");
+		obj3.put("OrderRequesterCode", "YOUR_CLIENT_CODE_HERE");
 		obj3.put("TradedQty", 0);
 		Response response = apis.OrderRequest(obj3);
 		System.out.println("\n Response >> " + response.body().string());
@@ -96,7 +96,7 @@ public class test2 {
 	public void MarginV3() throws IOException, ParseException {
 		System.out.println(" \n ************* MarginV3  ************* \n");
 		JSONObject obj3 = new JSONObject();
-		obj3.put("ClientCode", "96131461");
+		obj3.put("ClientCode", "YOUR_CLIENT_CODE_HERE");
 		;
 		Response response = apis.MarginV3(obj3);
 		System.out.println("\n Response >> " + response.body().string());
@@ -107,7 +107,7 @@ public class test2 {
 	public void OrderBookV2() throws IOException, ParseException {
 		System.out.println(" \n ************* OrderBookV2  ************* \n");
 		JSONObject obj3 = new JSONObject();
-		obj3.put("ClientCode", "96131461");
+		obj3.put("ClientCode", "YOUR_CLIENT_CODE_HERE");
 		Response response = apis.OrderBookV2(obj3);
 		System.out.println("\n Response >> " + response.body().string());
 		assertTrue(response.isSuccessful());
@@ -117,7 +117,7 @@ public class test2 {
 	public void TradeBookV1() throws IOException, ParseException {
 		System.out.println(" \n ************* TradeBookV1  ************* \n");
 		JSONObject obj3 = new JSONObject();
-		obj3.put("ClientCode", "96131461");
+		obj3.put("ClientCode", "YOUR_CLIENT_CODE_HERE");
 		Response response = apis.TradeBookV1(obj3);
 		System.out.println("\n Response >> " + response.body().string());
 		assertTrue(response.isSuccessful());
@@ -127,10 +127,10 @@ public class test2 {
 	public void PreOrdMarginCalculation() throws IOException, ParseException {
 		System.out.println(" \n ************* PreOrdMarginCalculation  ************* \n");
 		JSONObject obj3 = new JSONObject();
-		obj3.put("OrderRequestorCode", "SURVINHA");
+		obj3.put("OrderRequestorCode", "YOUR_CLIENT_CODE_HERE");
 		obj3.put("Exch", "N");
 		obj3.put("ExchType", "D");
-		obj3.put("ClientCode", "SURVINHA");
+		obj3.put("ClientCode", "YOUR_CLIENT_CODE_HERE");
 		obj3.put("ScripCode", "45609");
 		obj3.put("PlaceModifyCancel", "M");
 		obj3.put("TransactionType", "B");
@@ -155,7 +155,7 @@ public class test2 {
 	public void NetPositionV4() throws IOException, ParseException {
 		System.out.println(" \n ************* NetPositionV4  ************* \n");
 		JSONObject obj3 = new JSONObject();
-		obj3.put("ClientCode", "96131461");
+		obj3.put("ClientCode", "YOUR_CLIENT_CODE_HERE");
 		Response response = apis.NetPositionV4(obj3);
 		System.out.println("\n Response >> " + response.body().string());
 		assertTrue(response.isSuccessful());
@@ -165,7 +165,7 @@ public class test2 {
 	public void NetPositionNetWiseV1() throws IOException, ParseException {
 		System.out.println(" \n ************* NetPositionNetWiseV1  ************* \n");
 		JSONObject obj3 = new JSONObject();
-		obj3.put("ClientCode", "96131461");
+		obj3.put("ClientCode", "YOUR_CLIENT_CODE_HERE");
 		Response response = apis.NetPositionNetWiseV1(obj3);
 		System.out.println("\n Response >> " + response.body().string());
 		assertTrue(response.isSuccessful());
@@ -190,7 +190,7 @@ public class test2 {
 		ordStatusListReqObj.add(ordStatusReqObj);
 		ordStatusListReqObj.add(ordStatusReqObj2);
 
-		obj3.put("ClientCode", "96131461");
+		obj3.put("ClientCode", "YOUR_CLIENT_CODE_HERE");
 		obj3.put("Count", "2");
 		obj3.put("ClientLoginType", "0");
 		obj3.put("LastRequestTime", "/Date(1600248018615)/");
@@ -215,7 +215,7 @@ public class test2 {
 		ordStatusReqObj.put("ScripCode", 4717);
 		ordStatusReqObj.put("RemoteOrderID", "S123456789123456789");
 		ordStatusListReqObj.add(ordStatusReqObj);
-		obj3.put("ClientCode", "96131461");
+		obj3.put("ClientCode", "YOUR_CLIENT_CODE_HERE");
 		obj3.put("OrdStatusReqList", ordStatusListReqObj);
 		Response response = apis.OrderStatus(obj3);
 		System.out.println("\n Response >> " + response.body().string());
@@ -235,7 +235,7 @@ public class test2 {
 		ordStatusReqObj.put("ScripCode", 500410);
 		ordStatusReqObj.put("RemoteOrderID", "1557728588259000015");
 		ordStatusListReqObj.add(ordStatusReqObj);
-		obj3.put("ClientCode", "96131461");
+		obj3.put("ClientCode", "YOUR_CLIENT_CODE_HERE");
 		obj3.put("OrdStatusReqList", ordStatusListReqObj);
 
 		Response response = apis.TradeInformation(obj3);
@@ -247,7 +247,7 @@ public class test2 {
 	public void BackoffClientProfile() throws IOException, ParseException {
 		System.out.println(" \n ************* BackoffClientProfile  ************* \n");
 		JSONObject obj3 = new JSONObject();
-		obj3.put("ClientCode", "96131461");
+		obj3.put("ClientCode", "YOUR_CLIENT_CODE_HERE");
 		Response response = apis.BackoffClientProfile(obj3);
 		System.out.println("\n Response >> " + response.body().string());
 		assertTrue(response.isSuccessful());
@@ -259,7 +259,7 @@ public class test2 {
 		System.out.println(" \n ************* BackoffEquitytransaction  ************* \n");
 
 		JSONObject obj2 = new JSONObject();
-		obj2.put("ClientCode", "96131461");
+		obj2.put("ClientCode", "YOUR_CLIENT_CODE_HERE");
 		obj2.put("FromDate", "/Date(1600248018615)/");
 		obj2.put("ToDate", "/Date(1600248018615)/");
 		Response response = apis.BackoffEquitytransaction(obj2);
@@ -272,7 +272,7 @@ public class test2 {
 
 		System.out.println(" \n ************* BackoffFutureTransaction  ************* \n");
 		JSONObject obj2 = new JSONObject();
-		obj2.put("ClientCode", "96131461");
+		obj2.put("ClientCode", "YOUR_CLIENT_CODE_HERE");
 		obj2.put("FromDate", "/Date(1600248018615)/");
 		obj2.put("ToDate", "/Date(1600248018615)/");
 		Response response = apis.BackoffFutureTransaction(obj2);
@@ -285,7 +285,7 @@ public class test2 {
 		JSONParser parser = new JSONParser();
 		System.out.println(" \n ************* BackoffoptionTransaction  ************* \n");
 		JSONObject obj2 = new JSONObject();
-		obj2.put("ClientCode", "96131461");
+		obj2.put("ClientCode", "YOUR_CLIENT_CODE_HERE");
 		obj2.put("FromDate", "/Date(1600248018615)/");
 		obj2.put("ToDate", "/Date(1600248018615)/");
 		Response response = apis.BackoffoptionTransaction(obj2);
@@ -299,7 +299,7 @@ public class test2 {
 		System.out.println(" \n ************* BackoffLedger  ************* \n");
 
 		JSONObject obj2 = new JSONObject();
-		obj2.put("ClientCode", "96131461");
+		obj2.put("ClientCode", "YOUR_CLIENT_CODE_HERE");
 		obj2.put("FromDate", "/Date(1600248018615)/");
 		obj2.put("ToDate", "/Date(1600248018615)/");
 		Response response = apis.BackoffLedger(obj2);
@@ -313,7 +313,7 @@ public class test2 {
 		System.out.println(" \n ************* BackoffMutualFundTransaction  ************* \n");
 
 		JSONObject obj2 = new JSONObject();
-		obj2.put("ClientCode", "96131461");
+		obj2.put("ClientCode", "YOUR_CLIENT_CODE_HERE");
 		obj2.put("FromDate", "/Date(1600248018615)/");
 		obj2.put("ToDate", "/Date(1600248018615)/");
 		Response response = apis.BackoffMutualFundTransaction(obj2);
@@ -326,7 +326,7 @@ public class test2 {
 
 		System.out.println(" \n ************* BackoffDPTransaction  ************* \n");
 		JSONObject obj2 = new JSONObject();
-		obj2.put("ClientCode", "96131461");
+		obj2.put("ClientCode", "YOUR_CLIENT_CODE_HERE");
 		obj2.put("FromDate", "/Date(1600248018615)/");
 		obj2.put("ToDate", "/Date(1600248018615)/");
 		Response response = apis.BackoffDPTransaction(obj2);
@@ -338,7 +338,7 @@ public class test2 {
 	public void BackoffDPHolding() throws IOException, ParseException {
 		System.out.println(" \n ************* BackoffClientProfile  ************* \n");
 		JSONObject obj3 = new JSONObject();
-		obj3.put("ClientCode", "96131461");
+		obj3.put("ClientCode", "YOUR_CLIENT_CODE_HERE");
 		Response response = apis.BackoffDPHolding(obj3);
 		System.out.println("\n Response >> " + response.body().string());
 		assertTrue(response.isSuccessful());
